@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_3d_choice_chip/flutter_3d_choice_chip.dart';
+import 'package:flutter_bmi/gen/assets.gen.dart';
+
+import '../widgets/gender_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -29,17 +31,18 @@ class HomeScreen extends StatelessWidget {
                   BoxShadow(color: Colors.black.withOpacity(0.20),blurRadius: 10,offset: const Offset(0,5))
                 ]
               ),
-              child: ChoiceChip3D(
-                  onSelected: () {},
-                  onUnSelected: () {},
-                  child: Column(
-                    children: [
-                      Text("مرد")
-                    ],
-                  )),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  GenderWidget(size: size, gender: "زن", iconPath: Assets.images.woman.path),
+                  GenderWidget(size: size, gender: "مرد", iconPath: Assets.images.man.path),
+                ],
+              )
             )
           ],
       ),
     );
   }
 }
+
+
