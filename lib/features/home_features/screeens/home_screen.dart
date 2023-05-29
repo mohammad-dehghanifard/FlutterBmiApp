@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bmi/features/home_features/widgets/counter_widget.dart';
 import 'package:flutter_bmi/gen/assets.gen.dart';
+import 'package:swipeable_button_view/swipeable_button_view.dart';
 
 import '../widgets/gender_widget.dart';
 
@@ -12,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
         title: const Text('محاسبه گر قد و وزن',style: TextStyle(color: CupertinoColors.white)),
         centerTitle: true,
@@ -79,7 +80,15 @@ class HomeScreen extends StatelessWidget {
                      CounterWidget(size: size, title: 'سن', number: 35),
                      CounterWidget(size: size, title: 'وزن', number: 80),
                    ],
-                 )
+                 ),
+
+                  const SizedBox(height: 48),
+                  SwipeableButtonView(
+                      onFinish: () {},
+                      onWaitingProcess: () {},
+                      activeColor: Colors.blueAccent,
+                      buttonWidget: const Icon(Icons.send),
+                      buttonText: "شروع محسابه")
                 ],
               )
             ),
