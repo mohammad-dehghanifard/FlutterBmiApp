@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bmi/features/home_features/widgets/counter_widget.dart';
 import 'package:flutter_bmi/gen/assets.gen.dart';
 import 'package:swipeable_button_view/swipeable_button_view.dart';
-
 import '../widgets/gender_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,7 +20,6 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
           children: [
-
             Container(
               margin: const EdgeInsets.fromLTRB(8, 16, 8, 16),
               padding: const EdgeInsets.fromLTRB(8, 16, 8, 16),
