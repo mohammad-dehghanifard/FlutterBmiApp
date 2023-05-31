@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bmi/core/constants/app_texts.dart';
 import 'package:flutter_bmi/features/home_features/widgets/counter_widget.dart';
 import 'package:flutter_bmi/gen/assets.gen.dart';
 import 'package:swipeable_button_view/swipeable_button_view.dart';
@@ -14,7 +15,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: const Text('محاسبه گر قد و وزن',style: TextStyle(color: CupertinoColors.white)),
+        title:  Text(AppTexts.homeAppbarTxt,style: const TextStyle(color: CupertinoColors.white)),
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
@@ -38,14 +39,14 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      GenderWidget(size: size, gender: "زن", iconPath: Assets.images.woman.path),
-                      GenderWidget(size: size, gender: "مرد", iconPath: Assets.images.man.path),
+                      GenderWidget(size: size, gender: AppTexts.womanTxt, iconPath: Assets.images.woman.path),
+                      GenderWidget(size: size, gender: AppTexts.manTxt, iconPath: Assets.images.man.path),
                     ],
 
                   ),
                   const SizedBox(height: 24),
                   // select height
-                  const Text("قد خود را وارد کنید"),
+                   Text(AppTexts.inputHeightTxt),
                   // user height
                   Center(
                     child: RichText(
@@ -53,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                           text: '150',
                           style: const TextStyle(fontSize: 40,color: Colors.black),
                           children: [
-                            TextSpan(text: ' cm',style: TextStyle(fontSize: 16,color: Colors.grey.shade500))
+                            TextSpan(text: AppTexts.cmTxt,style: TextStyle(fontSize: 16,color: Colors.grey.shade500))
                           ]
                         ),
                     ),
