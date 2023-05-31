@@ -1,0 +1,3 @@
+class TextStyle{
+  TextStyle._();
+}
