@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_3d_choice_chip/flutter_3d_choice_chip.dart';
+import 'package:flutter_bmi/core/constants/text_styles.dart';
 
 class GenderWidget extends StatelessWidget {
   const GenderWidget({
@@ -22,7 +23,7 @@ class GenderWidget extends StatelessWidget {
           children: [
             Image.asset(iconPath,width: 64),
             const SizedBox(height: 8),
-            Text(gender)
+            Text(gender,style: TextStyles.genderTxtStyle)
           ],
         ));
   }

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bmi/core/constants/text_styles.dart';
 
 class CounterWidget extends StatelessWidget {
   const CounterWidget({
@@ -26,7 +27,7 @@ class CounterWidget extends StatelessWidget {
       child:  Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(title),
+          Text(title,style: TextStyles.genderTxtStyle,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -40,7 +41,7 @@ class CounterWidget extends StatelessWidget {
                   child: Icon(Icons.remove,color: Colors.white,),
                 ),
               ),
-              Text(number.toString()),
+              Text(number.toString(),style: TextStyles.normalBodyTxtStyle.apply(color: Colors.black),),
               GestureDetector(
                 onTap: () {
 

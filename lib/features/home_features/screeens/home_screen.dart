@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bmi/core/constants/app_texts.dart';
+import 'package:flutter_bmi/core/constants/text_styles.dart';
 import 'package:flutter_bmi/features/home_features/widgets/counter_widget.dart';
 import 'package:flutter_bmi/gen/assets.gen.dart';
 import 'package:swipeable_button_view/swipeable_button_view.dart';
@@ -15,7 +16,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title:  Text(AppTexts.homeAppbarTxt,style: const TextStyle(color: CupertinoColors.white)),
+        title:  Text(AppTexts.homeAppbarTxt,style: TextStyles.appBarTxtStyle),
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
@@ -46,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
                   // select height
-                   Text(AppTexts.inputHeightTxt),
+                   Text(AppTexts.inputHeightTxt,style: TextStyles.normalBodyTxtStyle,),
                   // user height
                   Center(
                     child: RichText(
@@ -54,7 +55,7 @@ class HomeScreen extends StatelessWidget {
                           text: '150',
                           style: const TextStyle(fontSize: 40,color: Colors.black),
                           children: [
-                            TextSpan(text: AppTexts.cmTxt,style: TextStyle(fontSize: 16,color: Colors.grey.shade500))
+                            TextSpan(text: AppTexts.cmTxt,style: TextStyles.cmTxtStyle)
                           ]
                         ),
                     ),
@@ -69,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: 24),
 
                   // age and Weight txt
-                  const Text("سن و وزن خود را مشخص کنید"),
+                   Text("سن و وزن خود را مشخص کنید",style: TextStyles.normalBodyTxtStyle,),
                   const SizedBox(height: 16),
 
                   // set user age and Weight
@@ -87,7 +88,9 @@ class HomeScreen extends StatelessWidget {
                       onWaitingProcess: () {},
                       activeColor: Colors.blueAccent,
                       buttonWidget: const Icon(Icons.send),
-                      buttonText: "شروع محسابه")
+                      buttonText: "شروع محسابه",
+                    buttontextstyle: TextStyles.bottomTxtStyle,
+                  )
                 ],
               )
             ),
