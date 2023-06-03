@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bmi/features/result_features/screens/result_screen.dart';
+import 'package:flutter_bmi/features/home_features/screeens/home_screen.dart';
 
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ResultScreen(),
+      home: const HomeScreen(),
     );
   }
 }

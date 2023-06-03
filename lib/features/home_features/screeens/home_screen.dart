@@ -70,15 +70,15 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: 24),
 
                   // age and Weight txt
-                   Text("سن و وزن خود را مشخص کنید",style: TextStyles.normalBodyTxtStyle,),
+                   Text(AppTexts.inputAgeAndWeight,style: TextStyles.normalBodyTxtStyle),
                   const SizedBox(height: 16),
 
                   // set user age and Weight
                  Row(
                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                    children: [
-                     CounterWidget(size: size, title: 'سن', number: 35),
-                     CounterWidget(size: size, title: 'وزن', number: 80),
+                     CounterWidget(size: size, title: AppTexts.ageTxt, number: 35),
+                     CounterWidget(size: size, title: AppTexts.weightTxt, number: 80),
                    ],
                  ),
 
@@ -88,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                       onWaitingProcess: () {},
                       activeColor: Colors.blueAccent,
                       buttonWidget: const Icon(Icons.send),
-                      buttonText: "شروع محسابه",
+                      buttonText: AppTexts.startCalculate,
                     buttontextstyle: TextStyles.bottomTxtStyle,
                   )
                 ],

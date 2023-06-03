@@ -10,4 +10,7 @@ class AppTexts{
   static String userResultTxt = "نتیجه نهایی سلامتی شما";
   static String shareTxt = "اشتراک گذاری";
   static String backTxt = "بازگشت";
+  static String inputAgeAndWeight = "سن و وزن خود را مشخص کنید";
+  static String ageTxt = "سن";
+  static String weightTxt = "وزن";
 }
