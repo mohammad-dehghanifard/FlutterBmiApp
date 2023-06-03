@@ -6,4 +6,8 @@ class AppTexts{
   static String inputHeightTxt = 'قد خود را وارد کنید';
   static String cmTxt = ' cm';
   static String startCalculate = "شروع محسابه";
+  static String resultTxt = "نتیجه";
+  static String userResultTxt = "نتیجه نهایی سلامتی شما";
+  static String shareTxt = "اشتراک گذاری";
+  static String backTxt = "بازگشت";
 }
