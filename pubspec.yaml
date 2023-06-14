@@ -41,6 +41,7 @@ dependencies:
   syncfusion_flutter_gauges: ^21.2.8
   share_plus: ^7.0.1
   google_fonts: ^4.0.5
+  flutter_bloc: ^8.0.1
 
 dev_dependencies:
   flutter_test:
