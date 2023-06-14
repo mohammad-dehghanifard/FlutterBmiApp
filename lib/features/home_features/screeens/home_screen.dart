@@ -4,7 +4,6 @@ import 'package:flutter_bmi/core/constants/app_texts.dart';
 import 'package:flutter_bmi/core/constants/text_styles.dart';
 import 'package:flutter_bmi/features/home_features/widgets/counter_widget.dart';
 import 'package:flutter_bmi/gen/assets.gen.dart';
-import 'package:swipeable_button_view/swipeable_button_view.dart';
 import '../widgets/gender_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -83,13 +82,16 @@ class HomeScreen extends StatelessWidget {
                  ),
 
                   const SizedBox(height: 48),
-                  SwipeableButtonView(
-                      onFinish: () {},
-                      onWaitingProcess: () {},
-                      activeColor: Colors.blueAccent,
-                      buttonWidget: const Icon(Icons.send),
-                      buttonText: AppTexts.startCalculate,
-                    buttontextstyle: TextStyles.bottomTxtStyle,
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                        onPressed: () {},
+                        style: ButtonStyle(
+                          backgroundColor: const MaterialStatePropertyAll(Colors.blue),
+                          shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
+                          overlayColor: const MaterialStatePropertyAll(Colors.transparent)
+                        ),
+                        child: Text(AppTexts.startCalculate,style: TextStyles.bottomTxtStyle)),
                   )
                 ],
               )
